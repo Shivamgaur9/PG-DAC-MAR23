@@ -1,0 +1,502 @@
+# Shell Scripting 
+
+# echo cmd : to print any value
+
+cdac@DESKTOP-NOGTTJJ:~$ echo name
+name
+cdac@DESKTOP-NOGTTJJ:~$ echo " name"
+ name
+cdac@DESKTOP-NOGTTJJ:~$ echo name
+name
+cdac@DESKTOP-NOGTTJJ:~$ echo "name"
+name
+cdac@DESKTOP-NOGTTJJ:~$ name="CDAC"
+cdac@DESKTOP-NOGTTJJ:~$ echo $name
+CDAC
+
+# MAKE A DIRECTORY (scripts)
+#While a directory is a hierarchical system that allows organizing data on different levels, a folder simply organizes data into one level. 
+
+
+cdac@DESKTOP-NOGTTJJ:~$ mkdir scripts
+cdac@DESKTOP-NOGTTJJ:~$ ls
+A  AB  ABC  ABCD  ABCDE  Mar23  abc.txt  dir1  hello.txt  hello2.txt  names1.csv  scripts
+cdac@DESKTOP-NOGTTJJ:~$ cd scripts
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+cdac@DESKTOP-NOGTTJJ:~/scripts$ touch first.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ls
+first.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi first.sh   // to enter vi editor
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat first.sh
+#!/bin/bash
+
+echo "Welcome to linux shell scripting!"
+
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./first.sh
+-bash: ./first.sh: Permission denied
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x first.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./first.sh
+Welcome to linux shell scripting!
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s1.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s1.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s1.sh
+Fri Mar 24 00:04:09 IST 2023
+Helllo;
+I am learning Shell Scripting !!#!/bin/bash
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s1.sh
+#!/bin/bash
+
+date
+echo "Helllo;"
+echo "I am learning Shell Scripting !!"#!/bin/bash
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s2.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s2.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s2.sh
+Hello, I am Shivam Gaur
+Hello, I am Shivam Gaur
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s2.sh
+#!/bin/bash
+
+MY_NAME="Shivam Gaur"
+echo "Hello, I am $MY_NAME"
+
+echo "Hello, I am ${MY_NAME}"
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s3.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s3.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s3.sh
+The contents of this directory are :
+first.sh
+s1.sh
+s2.sh
+s3.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s4.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s4.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s4.sh
+Welcome to shell programming!
+please, Enter your Name :
+Shivam
+Hello , Shivam !!
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s4.sh
+#!/bin/bash
+
+echo "Welcome to shell programming!"
+echo "please, Enter your Name :"
+read NAME
+echo "Hello , $NAME !!"
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s5.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s5.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s5.sh
+File Name: ./s5.sh
+Parameter 1 :
+Parameter 2 :
+Value 1 :
+Value 2 :
+Value 3 : 0
+Value 4 : 146
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s5.sh Good Morning !!
+./s5.sh Good Morning ./s5.sh
+File Name: ./s5.sh
+Parameter 1 : Good
+Parameter 2 : Morning
+Value 1 : Good Morning ./s5.sh
+Value 2 : Good Morning ./s5.sh
+Value 3 : 3
+Value 4 : 147
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s5.sh Shivam gaur hello
+File Name: ./s5.sh
+Parameter 1 : Shivam
+Parameter 2 : gaur
+Value 1 : Shivam gaur hello
+Value 2 : Shivam gaur hello
+Value 3 : 3
+Value 4 : 148
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s5.sh
+#!/bin/bash
+
+echo "File Name: $0"
+echo "Parameter 1 : $1"
+echo "Parameter 2 : $2"
+echo "Value 1 : $@"
+echo "Value 2 : $*"
+echo "Value 3 : $#"
+echo "Value 4 : $$"
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s6.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s6.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s6.sh
+Enter your name :
+Shivam
+Hello Shivam Greeeting from cdac mumbai !!
+i hope you doing well
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s6.sh
+#!/bin/bash
+
+echo "Enter your name : "
+read NAME
+
+echo "Hello ${NAME-sir/madam} Greeeting from cdac mumbai !!"
+echo "i hope you doing well"
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s7.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s7.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s7.sh
+./s7.sh: line 3: val: command not found
+Total =
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s7.sh
+#!/bin/bash
+
+val =`expr 2+2`
+echo "Total = $val"
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ expr 2 + 2
+4
+cdac@DESKTOP-NOGTTJJ:~/scripts$ expr 5 + 6
+11
+cdac@DESKTOP-NOGTTJJ:~/scripts$ `expr 11 + 22`
+
+
+33: command not found
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+cdac@DESKTOP-NOGTTJJ:~/scripts$ `expr 22 + 33`
+55: command not found
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ( expr 21 + 21 )
+42
+cdac@DESKTOP-NOGTTJJ:~/scripts$ x=6
+cdac@DESKTOP-NOGTTJJ:~/scripts$ y=9
+cdac@DESKTOP-NOGTTJJ:~/scripts$ expr $x */ $y
+expr: syntax error: unexpected argument ‘*/’
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ expr $x \* $y
+54
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+#Addition :
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s8.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s8.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s8.sh
+Enter 3 value
+1
+2
+3
+1
+2
+3
+6
+3
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s8.sh
+#!/bin/bash
+
+echo "Enter 3 value"
+
+#reading values
+read var1
+read var2
+read var3
+
+#printing value
+echo $var1
+echo $var2
+echo $var3
+
+#Addition
+
+(( sum1 = $var1 + $var2 + $var3 ))
+
+(( sum2 = $var1 + $var2 ))
+
+#print sum
+
+echo $sum1
+echo $sum2
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+ 
+#add two strings
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s9.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s9.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s9.sh
+UbuntuRed Hat is a distribution of linux os.
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s9.sh
+#!/bin/bash
+
+String1="Ubuntu"
+String2="Red Hat"
+
+#conacatenation
+
+String=$String1$String2
+echo "$String is a distribution of linux os."
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s10.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s10.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s10.sh
+enter number
+14
+number is greater than 10.
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s10.sh
+#!/bin/bash
+
+# if & else
+
+
+echo "enter number"
+read num
+
+if [ $num -lt 10 ]
+then
+        echo "number is less than 10."
+else
+        echo "number is greater than 10."
+fi
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s11.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s11.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s11.sh
+Enter a number
+3
+ODD
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s11.sh
+#!/bin/bash
+
+# print even or odd number
+
+echo "Enter a number"
+read num
+
+if [ $num%2 ==  0 ]
+then
+        echo "EVEN"
+else
+        echo "ODD"
+fi
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s12.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s12.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s12.sh
+using bash shell
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s12.sh
+#!/bin/bash
+
+#if elif ladder
+
+shellname="bash"
+if [ "$shellname" = "bash" ]
+then
+        echo "using bash shell"
+elif [ "$shellname" = "csh" ]
+then
+        echo "using c shell "
+else
+        echo "Not using any other shell"
+fi
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s13.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s13.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s13.sh
+enter a number
+100
+hundred  !!
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s13.sh
+enter a number
+200
+two hundred !!
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s13.sh
+enter a number
+600
+Not a hondred !!!
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s13.sh
+#!/bin/bash
+
+#pattern
+
+echo "enter a number"
+read num
+
+case $num in
+        100)
+                echo "hundred  !!";;
+        200)
+                echo "two hundred !!";;
+        *)
+                echo "Not a hondred !!!";;
+esac
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s14.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s14.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s14.sh
+ Executing for loop ....1
+ Executing for loop ....2
+ Executing for loop ....3
+ Executing for loop ....4
+ Executing for loop ....5
+ 
+ cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s14.sh
+#!/bin/bash
+
+#for loop
+
+for i in 1 2 3 4 5
+do
+        echo " Executing for loop ....$i"
+done
+ 
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s15.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s15.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s15.sh
+Executing for loop ... Hello
+Executing for loop ... 1
+Executing for loop ... first.sh
+Executing for loop ... s1.sh
+Executing for loop ... s10.sh
+Executing for loop ... s11.sh
+Executing for loop ... s12.sh
+Executing for loop ... s13.sh
+Executing for loop ... s14.sh
+Executing for loop ... s15.sh
+Executing for loop ... s2.sh
+Executing for loop ... s3.sh
+Executing for loop ... s4.sh
+Executing for loop ... s5.sh
+Executing for loop ... s6.sh
+Executing for loop ... s7.sh
+Executing for loop ... s8.sh
+Executing for loop ... s9.sh
+Executing for loop ... 2
+Executing for loop ... Goodbye
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s15.sh
+#!/bin/bash
+
+# * random value pick (Number of files which is in our folder)
+
+for i in Hello 1 * 2 Goodbye
+do
+        echo "Executing for loop ... $i"
+done
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s16.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s16.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s16.sh
+0
+5
+2
+2
+0
+5
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s16.sh
+#!/bin/bash
+
+# Nested loop
+
+for i in 1 2 3
+do
+        for j in 0 5
+        do
+                if [ $i -eq 2 ]
+                then
+                        echo "$i"
+                else
+                        echo "$j"
+                fi
+        done
+done
+
+# while loop
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s17.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s17.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s17.sh
+Value= 0
+Value= 1
+Value= 2
+Value= 3
+Value= 4
+Value= 5
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s17.sh
+#!/bin/bash
+
+#While loop
+
+a=0
+
+while [ $a -lt 10 ]
+do
+        echo "Value= $a"
+        if [ $a -eq 5 ]
+        then
+                break
+        fi
+        a=`expr $a + 1`
+done
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s18.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s18.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s18.sh
+Hello World !!!
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s18.sh
+#!/bin/bash
+
+Hello () {
+        echo "Hello World !!!"
+}
+
+
+Hello
+
+cdac@DESKTOP-NOGTTJJ:~/scripts$ vi s19.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ chmod +x s19.sh
+cdac@DESKTOP-NOGTTJJ:~/scripts$ ./s19.sh
+Hello Good !!!
+Greeting !!! Morning
+cdac@DESKTOP-NOGTTJJ:~/scripts$ cat s19.sh
+#!/bin/bash
+
+Hello () {
+        echo "Hello $1 !!!"
+        echo "Greeting !!! $2"
+}
+
+Hello Good Morning
+cdac@DESKTOP-NOGTTJJ:~/scripts$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

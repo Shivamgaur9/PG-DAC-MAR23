@@ -1,0 +1,29 @@
+//vi editor: step to using vi editor
+
+
+-----------------------------------
+1. vi filename.sh     //to open vi editor
+2. Esc +i    ( insert )     // Esc : able to write
+
+3. to Add command
+	#!/bin/bash           //#: can be use to comment
+	
+	(now write your program pattern)
+	
+4. Esc + :wq            // to save & exit    
+
+   w (save)  + q(exit)
+   
+-----------------------------------
+
+5. chmod +x filename.sh
+   (grant execution permission)
+   
+6. to Execute:
+	./filename.sh
+	or
+	bash filename.sh
+
+7. to exit vi editor if your file is empty 
+	
+	Esc + :q!
