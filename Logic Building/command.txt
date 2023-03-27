@@ -1,0 +1,790 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+cdac@DESKTOP-NOGTTJJ:~$ man sudo_root
+cdac@DESKTOP-NOGTTJJ:~$ whoami
+cdac
+cdac@DESKTOP-NOGTTJJ:~$ id
+uid=1000(cdac) gid=1000(cdac) groups=1000(cdac),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),116(netdev)
+cdac@DESKTOP-NOGTTJJ:~$ man date
+cdac@DESKTOP-NOGTTJJ:~$ date -u
+Tue Mar 21 09:06:54 UTC 2023
+cdac@DESKTOP-NOGTTJJ:~$ date +%a
+Tue
+cdac@DESKTOP-NOGTTJJ:~$ date +%A
+Tuesday
+cdac@DESKTOP-NOGTTJJ:~$ date +%b
+Mar
+cdac@DESKTOP-NOGTTJJ:~$ date +%B
+March
+cdac@DESKTOP-NOGTTJJ:~$ date +%c
+Tue Mar 21 14:53:04 2023
+cdac@DESKTOP-NOGTTJJ:~$ date +%C
+20
+
+# calender
+
+cdac@DESKTOP-NOGTTJJ:~$ cal      
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+cdac@DESKTOP-NOGTTJJ:~$ sudo apt install ncal
+[sudo] password for cdac:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package ncal
+cdac@DESKTOP-NOGTTJJ:~$ cal
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal    
+ 
+#step for install cal
+# 1) sudo apt-get update
+# 2)sudo apt install ncal
+
+cdac@DESKTOP-NOGTTJJ:~$ sudo apt-get update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [107 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [692 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [142 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [8836 B]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [642 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [100 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [556 B]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:14 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [710 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [116 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [13.8 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+Get:20 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [19.4 kB]
+Get:21 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [4068 B]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [948 kB]
+Get:23 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [240 B]
+Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [205 kB]
+Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [13.7 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [684 kB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [107 kB]
+Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [584 B]
+Get:29 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [890 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [177 kB]
+Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [18.1 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [24.1 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [6312 B]
+Get:34 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [444 B]
+Get:35 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [40.7 kB]
+Get:36 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [9800 B]
+Get:37 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [392 B]
+Get:38 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:39 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [19.5 kB]
+Get:40 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [14.0 kB]
+Get:41 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [392 B]
+Get:42 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 26.3 MB in 16s (1634 kB/s)
+Reading package lists... Done
+
+cdac@DESKTOP-NOGTTJJ:~$ sudo apt install ncal
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  ncal
+0 upgraded, 1 newly installed, 0 to remove and 73 not upgraded.
+Need to get 20.2 kB of archives.
+After this operation, 69.6 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 ncal amd64 12.1.7+nmu3ubuntu2 [20.2 kB]
+Fetched 20.2 kB in 1s (13.6 kB/s)
+Selecting previously unselected package ncal.
+(Reading database ... 24112 files and directories currently installed.)
+Preparing to unpack .../ncal_12.1.7+nmu3ubuntu2_amd64.deb ...
+Unpacking ncal (12.1.7+nmu3ubuntu2) ...
+Setting up ncal (12.1.7+nmu3ubuntu2) ...
+Processing triggers for man-db (2.10.2-1) ...
+cdac@DESKTOP-NOGTTJJ:~$ cal
+     March 2023
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+cdac@DESKTOP-NOGTTJJ:~$ cal -3
+   February 2023           March 2023            April 2023
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+          1  2  3  4            1  2  3  4                     1
+ 5  6  7  8  9 10 11   5  6  7  8  9 10 11   2  3  4  5  6  7  8
+12 13 14 15 16 17 18  12 13 14 15 16 17 18   9 10 11 12 13 14 15
+19 20 21 22 23 24 25  19 20 21 22 23 24 25  16 17 18 19 20 21 22
+26 27 28              26 27 28 29 30 31     23 24 25 26 27 28 29
+                                            30
+
+cdac@DESKTOP-NOGTTJJ:~$ cal -1
+     March 2023
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+# INVALID
+cdac@DESKTOP-NOGTTJJ:~$ cal -6
+cal: invalid option -- '6'
+Usage: cal [general options] [-jy] [[month] year]
+       cal [general options] [-j] [-m month] [year]
+       ncal -C [general options] [-jy] [[month] year]
+       ncal -C [general options] [-j] [-m month] [year]
+       ncal [general options] [-bhJjpwySM] [-H yyyy-mm-dd] [-s country_code] [-W number of days] [[month] year]
+       ncal [general options] [-Jeo] [year]
+General options: [-31] [-A months] [-B months] [-d yyyy-mm]
+
+# USE cal -m6
+
+cdac@DESKTOP-NOGTTJJ:~$ cal -m6
+     June 2023
+Su Mo Tu We Th Fr Sa
+             1  2  3
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29 30
+
+cdac@DESKTOP-NOGTTJJ:~$ cal -m5
+      May 2023
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+ #pwd - print name of current/working directory
+ #ls - list directory contents :giving the file of detailed information
+ 
+ # I HAVE NOT CREATED FILE YET
+cdac@DESKTOP-NOGTTJJ:~$ ls -l
+total 0                       
+
+# CREATE FILE 
+cdac@DESKTOP-NOGTTJJ:~$ touch abc.txt
+cdac@DESKTOP-NOGTTJJ:~$ ls
+abc.txt
+cdac@DESKTOP-NOGTTJJ:~$ touch names1.csv
+cdac@DESKTOP-NOGTTJJ:~$ ls
+abc.txt  names1.csv
+
+#CREATE DIRECTORY
+cdac@DESKTOP-NOGTTJJ:~$ mkdir Mar23
+cdac@DESKTOP-NOGTTJJ:~$ ls
+Mar23  abc.txt  names1.csv
+
+#Multiple directory at the time
+cdac@DESKTOP-NOGTTJJ:~$ mkdir -p dir1/dir2/dir3
+cdac@DESKTOP-NOGTTJJ:~$ ls
+Mar23  abc.txt  dir1  names1.csv
+
+#cd cmd :to enter/exit directory
+
+cdac@DESKTOP-NOGTTJJ:~$ cd
+cdac@DESKTOP-NOGTTJJ:~$ cd dir2
+-bash: cd: dir2: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~$ cd dir3
+-bash: cd: dir3: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~$ cd dir1
+cdac@DESKTOP-NOGTTJJ:~/dir1$ cd dir2
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ cd dir3
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ touch hello3.txt
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ ls
+hello3.txt
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ cd dir2
+-bash: cd: dir2: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ ls
+hello3.txt
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ cd  
+cdac@DESKTOP-NOGTTJJ:~$
+
+# crete file in directory
+
+cdac@DESKTOP-NOGTTJJ:~$ cd dir1
+cdac@DESKTOP-NOGTTJJ:~/dir1$ cd dir2
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ touch hello2.txt
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ ls
+dir3  hello2.txt
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ cd
+cdac@DESKTOP-NOGTTJJ:~$
+cdac@DESKTOP-NOGTTJJ:~$ cd dir1
+cdac@DESKTOP-NOGTTJJ:~/dir1$ cd dir2
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ cd dir3
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ touch hello3.txt
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ ls
+hello3.txt
+cdac@DESKTOP-NOGTTJJ:~$ cd dir3
+-bash: cd: dir3: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~$ cd dir3
+-bash: cd: dir3: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~$ cd Mar23
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ touch shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ touch ab abc abcd abcde
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+ab  abc  abcd  abcde  shivam.txt
+
+# to delete file : rm filename
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rm ab
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+abc  abcd  abcde  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ touch a ab
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  abcde  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rm abcde
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rm -rf
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  shivam.txt
+
+cdac@DESKTOP-NOGTTJJ:~$ cd Mar23
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  hello.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cd dir1
+-bash: cd: dir1: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cd dir1
+-bash: cd: dir1: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cd
+cdac@DESKTOP-NOGTTJJ:~$ ls
+A  AB  ABC  ABCD  ABCDE  Mar23  abc.txt  dir1  names1.csv
+cdac@DESKTOP-NOGTTJJ:~$ cd dir1
+cdac@DESKTOP-NOGTTJJ:~/dir1$ cd dir2
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ cd dir3
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ cd ..
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ cd ..
+cdac@DESKTOP-NOGTTJJ:~/dir1$ cd ..
+cdac@DESKTOP-NOGTTJJ:~$ 
+
+#cat - concatenate files and print on the standard output
+
+cdac@DESKTOP-NOGTTJJ:~$ cat > hello.txt
+Hello guys!
+
+Welcome to cdac Mumbai !
+
+#(press ctrl + d to exit)
+
+cdac@DESKTOP-NOGTTJJ:~$ cat > hello.txt
+Hello guys!
+
+Welcome to cdac Mumbai !cdac@DESKTOP-NOGTTJJ:~$ ls
+A  AB  ABC  ABCD  ABCDE  Mar23  abc.txt  dir1  hello.txt  names1.csv
+cdac@DESKTOP-NOGTTJJ:~$ touch hello2.txt
+cdac@DESKTOP-NOGTTJJ:~$ ls
+A  AB  ABC  ABCD  ABCDE  Mar23  abc.txt  dir1  hello.txt  hello2.txt  names1.csv
+
+#  cp - copy files and directories
+
+cdac@DESKTOP-NOGTTJJ:~$ cp hello.txt hello2.txt
+cdac@DESKTOP-NOGTTJJ:~$ ls
+A  AB  ABC  ABCD  ABCDE  Mar23  abc.txt  dir1  hello.txt  hello2.txt  names1.csv
+cdac@DESKTOP-NOGTTJJ:~$ cat hello2.txt
+Hello guys!
+
+Welcome to cdac Mumbai !cdac@DESKTOP-NOGTTJJ:~$ cat hello.txt
+Hello guys!
+
+Welcome to cdac Mumbai !cdac@DESKTOP-NOGTTJJ:~$
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  hello.txt  shiamgaur.txt  shivam.txt  shivamgaur  shivamgaur.txt  shivm.txt  sivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rm sivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rm shivm.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  hello.txt  shiamgaur.txt  shivam.txt  shivamgaur  shivamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rm shiam.txt
+rm: cannot remove 'shiam.txt': No such file or directory
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  hello.txt  shiamgaur.txt  shivam.txt  shivamgaur  shivamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rm shiamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  hello.txt  shivam.txt  shivamgaur  shivamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  hello.txt  shivam.txt  shivamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > shivam.txt
+hello what is your name ?
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat shivam.txt
+hello what is your name ?
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > shivam.txt
+what is your name ?
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat >> shivam.txt      // >> use for update any file
+
+my name is shivam.
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat shivam.txt
+what is your name ?
+
+my name is shivam.
+# ( press ctrl + d to exit )
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > shivamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat shivamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$                       // empty file
+
+# copy one file's content in other file
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cp shivam.txt shivamgaur.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat shivamgaur.txt
+what is your name ?
+
+my name is shivam.
+
+#  mv - move (rename) files
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ man mv
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ mv shivamgaur.txt intro.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat intro.txt
+what is your name ?
+
+my name is shivam.
+
+#cp - copy files and directories
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > color.txt
+red
+green
+blue
+yellow
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat color.txt
+red
+green
+blue
+yellow
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  color.txt  hello.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+#wc - print newline, word, and byte counts for each file
+
+dac@DESKTOP-NOGTTJJ:~/Mar23$ man wc       // press q to exit
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ wc color.txt
+ 4  4 23 color.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ wc -l color.txt
+4 color.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+ 
+#  echo - display a line of text
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ man echo
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ echo "HELLO"
+HELLO
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ echo "hello shivam"
+hello shivam
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+#    ( slash)  /  - root directory
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls /
+bin  boot  dev  etc  home  init  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls / | wc -w
+23
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls / >details.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  color.txt  details.txt  hello.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat details.txt
+bin
+boot
+dev
+etc
+home
+init
+lib
+lib32
+lib64
+libx32
+media
+mnt
+opt
+proc
+root
+run
+sbin
+snap
+srv
+sys
+tmp
+usr
+var
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+# cat cmd : to show content
+# ls -l (size)
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ touch employe employee.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls -l
+total 0
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:40 a
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:40 ab
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:34 abc
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:34 abcd
+-rw-r--r-- 1 cdac cdac  23 Mar 22 22:09 color.txt
+-rw-r--r-- 1 cdac cdac 108 Mar 22 22:47 details.txt
+-rw-r--r-- 1 cdac cdac   0 Mar 22 22:54 employe
+-rw-r--r-- 1 cdac cdac   0 Mar 22 22:54 employee.txt
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:45 hello.txt
+-rw-r--r-- 1 cdac cdac  40 Mar 22 22:01 intro.txt
+-rw-r--r-- 1 cdac cdac  40 Mar 22 21:45 shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls -l
+total 0
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:40 a
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:40 ab
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:34 abc
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:34 abcd
+-rw-r--r-- 1 cdac cdac  23 Mar 22 22:09 color.txt
+-rw-r--r-- 1 cdac cdac 108 Mar 22 22:47 details.txt
+-rw-r--r-- 1 cdac cdac   0 Mar 22 22:54 employe
+-rw-r--r-- 1 cdac cdac   0 Mar 22 22:54 employee.txt
+-rw-r--r-- 1 cdac cdac   0 Mar 21 16:45 hello.txt
+-rw-r--r-- 1 cdac cdac  40 Mar 22 22:01 intro.txt
+-rw-r--r-- 1 cdac cdac  40 Mar 22 21:45 shivam.txt
+
+# copy/paste
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls /usr/ >details.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat details.txt
+bin
+games
+include
+lib
+lib32
+lib64
+libexec
+libx32
+local
+sbin
+share
+src
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ touch hello3.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > hello3.txt
+Good Morning
+
+welcome to CDAC Mumbai !
+
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat >> hello3.txt
+linux is so difficult!
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat hello3.txt
+Good Morning
+
+welcome to CDAC Mumbai !
+
+
+linux is so difficult!
+
+# append information
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls -l /tmp/ >>details.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat details.txt
+bin
+games
+include
+lib
+lib32
+lib64
+libexec
+libx32
+local
+sbin
+share
+src
+total 0
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ mkdir code
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  code  color.txt  details.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ mkdir test
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  code  color.txt  details.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt  test
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+cdac@DESKTOP-NOGTTJJ:~$ cd dir1
+cdac@DESKTOP-NOGTTJJ:~/dir1$ cd dir2
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ cd dir3
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ 
+
+dac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2/dir3$ cd ..
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$  rm -rf dir3           // remove forcefully dir3
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ ls
+hello2.txt
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$ cd dir3
+-bash: cd: dir3: No such file or directory
+cdac@DESKTOP-NOGTTJJ:~/dir1/dir2$
+
+#uniq - report or omit repeated lines
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > courses
+java
+python
+c
+cpp
+unix
+java
+python
+java
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat courses
+java
+python
+c
+cpp
+unix
+java
+python
+java
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat >> courses
+linux
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat courses
+java
+python
+c
+cpp
+unix
+java
+python
+java
+linux
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+# sort and remove repeated word
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ sort courses | uniq
+c
+cpp
+java
+linux
+python
+unix
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > dupli.txt
+two
+five
+four
+four
+five
+three
+one
+six
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ sort dupli.txt | uniq
+five
+four
+one
+six
+three
+two
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > alphabets.txt
+c
+b
+d
+a
+e
+g
+f
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ sort alphabets.txt     // sorting
+a
+b
+c
+d
+e
+f
+g
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt  test
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt  test
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls ?
+a
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls ??
+ab
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls ???
+abc
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls ????
+abcd
+
+code:
+
+test:
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ file *
+a:             ASCII text
+ab:            empty
+abc:           empty
+abcd:          empty
+alphabets.txt: ASCII text
+code:          directory
+color.txt:     ASCII text
+courses:       ASCII text
+details.txt:   ASCII text
+dupli.txt:     ASCII text
+employe:       empty
+employee.txt:  ASCII text
+hello.txt:     empty
+hello3.txt:    ASCII text
+intro.txt:     ASCII text
+shivam.txt:    ASCII text
+test:          directory
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls a*
+a  ab  abc  abcd  alphabets.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls b*
+ls: cannot access 'b*': No such file or directory
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls ab*
+ab  abc  abcd
+
+
+# mkdir : to make directory 
+# rmdir : remove directory 
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ mkdir test
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt  test
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ mkdir tron
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt  test  tron
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rmdir [t]*
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ mkdir h hh  hhhhh  hhhhhh
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  h  hello.txt  hello3.txt  hh  hhhhh  hhhhhh  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ rmdir [h]*
+rmdir: failed to remove 'hello.txt': Not a directory
+rmdir: failed to remove 'hello3.txt': Not a directory
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls [abcd]*
+a  ab  abc  abcd  alphabets.txt  color.txt  courses  details.txt  dupli.txt
+
+code:
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls [a,b,c,d]*
+a  ab  abc  abcd  alphabets.txt  color.txt  courses  details.txt  dupli.txt
+
+code:
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls [a-d]*
+a  ab  abc  abcd  alphabets.txt  color.txt  courses  details.txt  dupli.txt
+
+code:
+
+
+# grep cmd : identify the patterns
+
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ man grep
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat courses
+java
+python
+c
+cpp
+unix
+java
+python
+java
+linux
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ grep unix courses
+unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ grep -i Unix courses
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat courses
+java
+python
+c
+cpp
+unix
+java
+python
+java
+linux
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > courses
+unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat courses
+unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat > courses
+Unix
+Unix
+Unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat courses
+Unix
+Unix
+Unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat >> courses
+python
+oracle
+java
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ cat courses
+Unix
+Unix
+Unix
+python
+oracle
+java
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ grep -i Unix courses
+Unix
+Unix
+Unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ grep -n Unix courses
+1:Unix
+2:Unix
+3:Unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ grep -ni Unix courses
+1:Unix
+2:Unix
+3:Unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ grep -c Unix courses
+3
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ grep -ic Unix courses
+3
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ sort -r courses
+python
+oracle
+java
+Unix
+Unix
+Unix
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ sort courses
+Unix
+Unix
+Unix
+java
+oracle
+python
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ ls
+a  ab  abc  abcd  alphabets.txt  code  color.txt  courses  details.txt  dupli.txt  employe  employee.txt  hello.txt  hello3.txt  intro.txt  shivam.txt
+cdac@DESKTOP-NOGTTJJ:~/Mar23$ sort -c courses
+sort: courses:5: disorder: oracle
+cdac@DESKTOP-NOGTTJJ:~/Mar23$
+
+
+
