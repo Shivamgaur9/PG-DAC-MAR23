@@ -120,9 +120,9 @@ public class PatternAssignment{
 		}
 	} 
 	/*
-				 *
-			   * *
-			 * * *
+		          *
+			* *
+		      * * *
 		   * * * *
 		 * * * * *     */
 	
@@ -143,7 +143,7 @@ public class PatternAssignment{
 		}
 	} 
 	/* op:
-				1
+			    1
 			   1 2
 			  1 2 3
 			 1 2 3 4
@@ -168,7 +168,7 @@ public class PatternAssignment{
 		}
 	} 
 	/* op:
-				5
+			    5
 			   4 5
 			  3 4 5
 			 2 3 4 5
@@ -194,7 +194,7 @@ public class PatternAssignment{
 		}
 	}
 	/* op:
-				A
+			    A
 			   A B
 			  A B C
 			 A B C D
@@ -223,7 +223,7 @@ public class PatternAssignment{
 		}
 	} 
 	/* op:
-				E
+			    E
 			   D E
 			  C D E
 			 B C D E
@@ -254,7 +254,7 @@ public class PatternAssignment{
 		}
 	} 
 	/* op:
-				*
+			    *
 			   ***
 			  *****
 			 *******
@@ -279,7 +279,7 @@ public class PatternAssignment{
 		}
 	} 
 	/* op:
-				1
+			    1
 			   2 2
 			  3 3 3
 			 4 4 4 4
@@ -307,7 +307,7 @@ public class PatternAssignment{
 		}
 	}
 	/* op:
-				A
+			    A
 			   B B
 			  C C C
 			 D D D D
