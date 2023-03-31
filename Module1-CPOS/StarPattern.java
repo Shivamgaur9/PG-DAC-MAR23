@@ -1,13 +1,14 @@
 // StarPatternAssignment:  (for n=5) dydsfdsytfdscy
 import java.util.*;
 public class StarPattern{
+	
 	//function for Star Pattern
 	public static void StarPattern1(int n){
 		System.out.println("-------------------------------StarPattern1----------------------------------->");
 		//outer loop
 		for(int i=1; i<=n;i++){
 			//inner loop
-	            	for(int j=1;j<=i;j++){
+			for(int j=1;j<=i;j++){
 				System.out.print("*");
 			}
 			System.out.println();
@@ -35,7 +36,7 @@ public class StarPattern{
 		}
 	} 
 	/*op:
-	            *
+	        *
 		   **
 		  ***
 		 ****
@@ -53,11 +54,11 @@ public class StarPattern{
 		}
 	} 
 	/* op: 
-                *****
-	        ****
-		***
-                **
-	        *        */
+             *****
+			 ****
+		     ***
+			 **
+			 *        */
 	
 	public static void StarPattern4(int n){
 		System.out.println("-------------------------------StarPattern4----------------------------------->");
@@ -78,7 +79,7 @@ public class StarPattern{
 			 ****
 			  ***
 			   **
-			    *       */
+				*      */
 	
 	public static void StarPattern5(int n){
 		System.out.println("-------------------------------StarPattern5----------------------------------->");
@@ -101,7 +102,7 @@ public class StarPattern{
 		}
 	} 
 	/* op:
-			    *
+				*
 			   ***
 			  *****
 			 *******
@@ -129,8 +130,8 @@ public class StarPattern{
 			*********
  			 *******
   			  *****
-                           ***
-                            *	         */
+               ***
+                *	         */
 	
 	public static void StarPattern7(int n){
 		System.out.println("-------------------------------StarPattern7----------------------------------->");
@@ -166,7 +167,7 @@ public class StarPattern{
 	} 
 	/* op:
 
-	    *
+		*
 	   ***
 	  *****
 	 *******
@@ -174,7 +175,7 @@ public class StarPattern{
 	 *******
 	  *****
 	   ***
-	    *             */
+		*             */
 	
 	public static void StarPattern8(int n){
 		System.out.println("-------------------------------StarPattern8----------------------------------->");
@@ -233,12 +234,12 @@ public class StarPattern{
 		}
 	} 
 	/* op: 
-    		    *
+    		*
    		   **
   		  ***
  		 ****
 		*****
- 	         ****
+ 	     ****
   		  ***
    		   **
    		    *        */
@@ -261,11 +262,11 @@ public class StarPattern{
         }
     }       
 	/* op:
-		       *****
-		      *****
-                     *****
-		    *****
-	           *****	    */
+			*****
+		   *****
+          *****
+		 *****
+	    *****	    */
 	
 	public static void StarPattern11(int n){
 		System.out.println("-------------------------------StarPattern11----------------------------------->");
@@ -286,10 +287,10 @@ public class StarPattern{
     }       
 	/* op: 
 	       *****
-                *****
-                 *****
-                  *****
-                   *****       */
+            *****
+             *****
+              *****
+               *****       */
 	
 	public static void StarPattern12(int n){
 		System.out.println("-------------------------------StarPattern12----------------------------------->");
@@ -347,7 +348,7 @@ public class StarPattern{
 		}
 	} 
 	/*op: 
-	   *****
+	       *****
             ****
              ***
               **
@@ -386,8 +387,8 @@ public class StarPattern{
  			 * * * *
    			  * * *
    			   * *
-     			    * 
-    		           * *
+     			* 
+    		   * *
    			  * * *
  			 * * * *
  			* * * * *        */
@@ -434,14 +435,15 @@ public class StarPattern{
 		} 
 	} 
     /*op:
-		     *
-		    **
+			 *
+			**
 		   * *
 		  *  *
 		 *****        */
 	
 	
 	public static void main(String args[]){
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the number of lines : ");
 		int n = sc.nextInt();
