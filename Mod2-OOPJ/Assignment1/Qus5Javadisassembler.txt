@@ -1,0 +1,8 @@
+ 5.Use Java disassembler and its switches to observe bytecode.
+
+C:\Users\lenovo\Desktop\Cdac\Module2-OOPJ\Assignment1>javap Hello1
+Compiled from "Hello1.java"
+public class Hello1 {
+  public Hello1();   
+  public static void main(java.lang.String[]);
+} 
